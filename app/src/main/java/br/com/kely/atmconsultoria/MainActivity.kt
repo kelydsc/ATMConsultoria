@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //ciclo de vida execução do metodo: onCreate
+        Toast.makeText(applicationContext, "onCreate", Toast.LENGTH_LONG).show()
+
         imageViewMenuClientes.setOnClickListener {
             Log.i("BOTAO", "Botao pressionado")
 
@@ -50,4 +53,45 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //ciclo de vida execução do metodo: onStart
+    override fun onStart() {
+        super.onStart()
+
+        Toast.makeText(applicationContext, "onStart", Toast.LENGTH_LONG).show()
+    }
+
+    //ciclo de vida execução do metodo: onResume
+    override fun onResume() {
+        super.onResume()
+
+        Toast.makeText(applicationContext, "onResume", Toast.LENGTH_LONG).show()
+    }
+
+    //ciclo de vida execução do metodo: onPause
+    override fun onPause() {
+        super.onPause()
+
+        Toast.makeText(applicationContext, "onPause", Toast.LENGTH_LONG).show()
+    }
+
+    //ciclo de vida execução do metodo: onStop
+    override fun onStop() {
+        super.onStop()
+
+        Toast.makeText(applicationContext, "onStop", Toast.LENGTH_LONG).show()
+    }
+
+    //ciclo de vida execução do metodo: onRestart
+    override fun onRestart() {
+        super.onRestart()
+
+        Toast.makeText(applicationContext, "onRestart", Toast.LENGTH_LONG).show()
+    }
+
+    //ciclo de vida execução do metodo: onDestroy
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Toast.makeText(applicationContext, "onDestroy", Toast.LENGTH_LONG).show()
+    }
 }
