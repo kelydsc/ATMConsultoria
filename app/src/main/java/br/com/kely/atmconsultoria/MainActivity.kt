@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,9 @@ class MainActivity : AppCompatActivity() {
 
         imageViewMenuClientes.setOnClickListener {
             Log.i("BOTAO", "Botao pressionado")
+
+            //applicationContext ou this
+            Toast.makeText(applicationContext, "Cliente foi clicado", Toast.LENGTH_LONG).show()
 
             val intentCliente = Intent(this, DetalheClienteActivity::class.java)//context = this
 
